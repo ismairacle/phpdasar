@@ -1,5 +1,9 @@
 <?php 
+<<<<<<< HEAD:pertemuan10/tambah.php
     require 'functions.php';
+=======
+    require'functions.php';
+>>>>>>> ab44f878b98b7116ee1197997a11fb031aedef0c:phpdasar/pertemuan10/tambah.php
 
     if ( isset($_POST["submit"]) ) {
         if (tambah($_POST) > 0) { //data yang diinputkan ditambah dan diambil oleh $data
@@ -12,7 +16,11 @@
         } else {
             echo "
                 <script>
+<<<<<<< HEAD:pertemuan10/tambah.php
                     alert('data gagal ditambahkan!');
+=======
+                    alert('data berhasil ditambahkan!');
+>>>>>>> ab44f878b98b7116ee1197997a11fb031aedef0c:phpdasar/pertemuan10/tambah.php
                 </script>
             ";
         }
