@@ -32,6 +32,8 @@ index.php = teman mengambilkan wadah yang isinya sudah ada baju yang dipilih -->
 <!-- halaman index ini akan dipakai oleh admin untuk membuka dan mengedit database -->
 <h1>Halaman Admin</h1>
 
+<a href="tambah.php">Tambah data Mahasiswa</a><br>
+<br>
 <table border="1" cellpadding="10" cellspacing="0">
 
     <tr>
@@ -47,10 +49,10 @@ index.php = teman mengambilkan wadah yang isinya sudah ada baju yang dipilih -->
     <?php $i = 1; ?>
     <?php foreach ($mahasiswa as $row) : ?>
     <tr>
-        <td><?php echo $i; ?></td>
+        <td><?= $i; ?></td>
         <td>
             <a href="">ubah</a> |
-            <a href="">hapus</a>
+            <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">hapus</a>
         </td>
         <td><img src="img/<?= $row["gambar"]; ?>" alt="Gambar <?= $row["nama"]; ?>"></td>
         <td><?= $row["nrp"]; ?></td>

@@ -15,4 +15,42 @@ function query($query) {
     return $rows;
 }
 
+
+//function tambah data
+function tambah($data) {
+    global $conn;
+
+     // 3. ambil data dari tiap element kedalam form (menyiapkan data dari tiap element kedalam tiap tiap variabel)
+    $nama = htmlspecialchars($data["nama"]);
+    $nrp = htmlspecialchars($data["nrp"]);
+    $email = htmlspecialchars($data["email"]);
+    $jurusan = htmlspecialchars($data["jurusan"]);
+    $gambar = htmlspecialchars($data["gambar"]);
+
+     //4. query insert data (mmeyiapkan query datanya kedalam variabel query)
+    //urutan harus sesuai dengan tabel database
+    $query = "INSERT INTO mahasiswa VALUES ('', '$nama', '$nrp', '$email', '$jurusan', '$gambar' )";
+
+     // 5. ambil/query data, dari data yang diinputkan kedalam database
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
+
+//function hapus
+function hapus($id) {
+    global $conn;
+    mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id ");
+
+    return mysqli_affected_rows($conn);
+}
+
+
+
+
+ 
+
+
 ?>
+
+
