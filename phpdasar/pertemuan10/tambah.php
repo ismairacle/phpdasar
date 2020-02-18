@@ -1,5 +1,5 @@
 <?php 
-    require'functions.php';
+    require 'functions.php';
 
     if ( isset($_POST["submit"]) ) {
         if (tambah($_POST) > 0) { //data yang diinputkan ditambah dan diambil oleh $data
@@ -12,7 +12,7 @@
         } else {
             echo "
                 <script>
-                    alert('data berhasil ditambahkan!');
+                    alert('data gagal ditambahkan!');
                 </script>
             ";
         }
