@@ -51,7 +51,7 @@ index.php = teman mengambilkan wadah yang isinya sudah ada baju yang dipilih -->
     <tr>
         <td><?= $i; ?></td>
         <td>
-            <a href="">ubah</a> |
+            <a href="edit.php?id=<?= $row["id"]; ?>">ubah</a> |
             <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">hapus</a>
         </td>
         <td><img src="img/<?= $row["gambar"]; ?>" alt="Gambar <?= $row["nama"]; ?>"></td>

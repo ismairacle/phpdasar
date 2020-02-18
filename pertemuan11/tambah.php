@@ -13,7 +13,6 @@
             echo "
                 <script>
                     alert('data gagal ditambahkan!');
-                    document.location.href = 'index.php';
                 </script>
             ";
         }
@@ -50,31 +49,38 @@
     <h1>Tambah Data Mahasiswa</h1>
 
     <form action="" method="post">
-        <ul>
-            <li>
-                <label for="nama">Nama : </label>
-                <input type="text" name="nama" id="nama" required>
-            </li>
-            <li>
-                <label for="nrp">NRP : </label>
-                <input type="text" name="nrp" id="nrp" required>
-            </li>
-            <li>
-                <label for="email">Email : </label>
-                <input type="text" name="email" id="email" required>
-            </li>
-            <li>
-                <label for="jurusan">Jurusan : </label>
-                <input type="text" name="jurusan" id="jurusan" required>
-            </li>
-            <li>
-                <label for="gambar">Gambar : </label>
-                <input type="text" name="gambar" id="gambar">
-            </li>
-            <li>
-                <button type="submit" name="submit">Tambah Data</button>
-            </li>
-        </ul>
+        <table>
+            <tr>
+                <td><label for="nama">Nama  </label></td>
+                <td>:</td>
+                <td><input type="text" name="nama" id="nama" required></td>
+            </tr>
+            <tr>
+                <td><label for="nrp">NRP  </label></td>
+                <td>:</td>
+                <td><input type="text" name="nrp" id="nrp" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email  </label></td>
+                <td>:</td>
+                <td><input type="text" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="jurusan">Jurusan  </label></td>
+                <td>:</td>
+                <td><input type="text" name="jurusan" id="jurusan" required></td>
+            </tr>
+            <tr>
+                <td><label for="gambar">Gambar  </label></td>
+                <td>:</td>
+                <td><input type="text" name="gambar" id="gambar"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><button type="submit" name="submit">Tambah Data</button></td>
+            </tr>
+        </table>
     </form>
 
     <a href="index.php">Kembali ke Halaman Utama</a>
